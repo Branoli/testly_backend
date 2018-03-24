@@ -1,5 +1,5 @@
 from .models import WoodTable
-from .serializers import AllWoodTableSerializer
+from .serializers import WoodTableSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
@@ -8,6 +8,6 @@ from rest_framework.decorators import api_view
 def get_all(request):
 
     snippets = WoodTable.objects.all()
-    serializer = AllWoodTableSerializer(snippets,
-                                        many=True)
+    serializer = WoodTableSerializer(snippets,
+                                     many=True)
     return Response(serializer.data)
