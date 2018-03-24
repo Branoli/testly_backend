@@ -105,9 +105,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-Будет удалено .gitignore
-Будет удалено .idea/inspectionProfiles/
-Будет удалено .idea/vcs.xml
-Будет удалено templates/
-Будет удалено testly_db_app/__pycache__/
-Будет удалено testly_db_app/migrations/__pycache__/
+.gitignore
+.idea/inspectionProfiles/
+.idea/vcs.xml
+templates/
