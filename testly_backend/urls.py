@@ -20,4 +20,5 @@ from django.urls import include
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^', include('testly_db_app.urls')),
+    url(r'^api-auth/', include('rest_framework.urls')),
 ]
