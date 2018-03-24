@@ -126,6 +126,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+MPTT_ADMIN_LEVEL_INDENT = 20
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
