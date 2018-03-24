@@ -47,19 +47,3 @@ def get_subtree(request, pk):
 
     serializer = WoodTableSerializer(subtree, many=True)
     return Response(serializer.data)
-
-
-@api_view(['GET'])
-def get_search_text(request, text):
-
-    permission_classes = (
-        permissions.IsAuthenticated,
-    )
-
-    try:
-        subtree = WoodTable.objects.get(text__iexact=text).get_ancestors()
-    except WoodTable.DoesNotExist:
-        return Response(status=404)
-
-    serializer = WoodTableSerializer(subtree, many=True)
-    return Response(serializer.data)
