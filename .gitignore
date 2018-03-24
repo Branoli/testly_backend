@@ -2,7 +2,6 @@
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
 
 # C extensions
@@ -106,6 +105,6 @@ venv.bak/
 .mypy_cache/
 
 .idea/inspectionProfiles/
-/.idea/vcs.xml
+.idea/vcs.xml
 templates/
-/.gitignore
+.gitignore
