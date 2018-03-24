@@ -23,3 +23,15 @@ def post_element(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def get_subtree(request, pk):
+
+    try:
+        subtree = WoodTable.objects.get(id=pk).get_descendants()
+    except WoodTable.DoesNotExist:
+        return Response(status=404)
+
+    serializer = WoodTableSerializer(subtree, many=True)
+    return Response(serializer.data)
